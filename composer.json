@@ -1,0 +1,32 @@
+{
+  "name": "ggg3/kkphim-theme-bptv",
+  "description": "KKPhim's bptv theme",
+  "type": "library",
+  "authors": [
+    {
+      "name": "ggg3",
+      "email": "contact.animehay@gmail.com"
+    }
+  ],
+  "require": {
+    "laravel/framework": "^6|^7|^8",
+    "ckfinder/ckfinder-laravel-package": "v3.5.2.1",
+    "haiau009/kkphim-core": "^1.1.0"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "KKPhim\\ThemeBptv\\": "src/",
+      "KKPhim\\ThemeBptv\\Database\\Factories\\": "database/factories/",
+      "KKPhim\\ThemeBptv\\Database\\Seeders\\": "database/seeders/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "KKPhim\\ThemeBptv\\ThemeBptvServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "stable"
+}
