@@ -1,8 +1,8 @@
 <section>
     <div class="Top">
-        <h2>
+        <h1>
             <a href="{{ $item['link'] }}">{{ $item['label'] }} <i class=" fa fa-angle-right"></i></a>
-        </h2>
+        </h1>
     </div>
     <ul class="MovieList Rows AX A06 B04 C03 E20">
         @foreach ($item['data'] as $movie)
