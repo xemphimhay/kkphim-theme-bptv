@@ -184,6 +184,16 @@
                             </li>
                         </ul>
                     </li>
+                    <input type="text" id="searchBox" placeholder="Tìm tập phim..."
+                        style="
+    background: 0 0;
+    border: 1px solid #fff;
+    height: 32px;
+    width: 200px;
+    padding: 5px;
+    
+
+">
                 </ul>
             </center>
         </div>

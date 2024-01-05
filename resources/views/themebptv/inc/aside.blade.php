@@ -1,4 +1,5 @@
 <aside class="widget-area" role="complementary">
+    {!! get_theme_option('notification_text') !!}
     {{-- <div class="Dvr-300">
     </div> --}}
     @foreach ($tops as $item)

@@ -93,7 +93,7 @@ class ThemeBptvServiceProvider extends ServiceProvider
                         'name' => 'body_attributes',
                         'label' => 'Body attributes',
                         'type' => 'text',
-                        'value' => "class='home blog wp-custom-logo NoBrdRa' style='background-image: url(/themes/bptv/images/background.png);'",
+                        'value' => "class='home blog wp-custom-logo NoBrdRa' style='background-color:#263238;'",
                         'tab' => 'Custom CSS'
                     ],
                     [
@@ -186,6 +186,19 @@ class ThemeBptvServiceProvider extends ServiceProvider
                         <img src="" alt="">
                         EOT,
                         'tab' => 'Ads'
+                    ],
+                    [
+                        'name' => 'notification_text',
+                        'label' => 'Thông báo ',
+                        'type' => 'code',
+                        'value' => <<<EOT
+                        <section class="Wdgt">
+                            <div class="Title" bis_skin_checked="1">Thông báo?
+                            </div>
+                            <p>Nếu bạn buồn phiền không biết xem gì hôm nay. Hãy để chúng tôi chọn cho bạn</p>
+                        </section>
+                        EOT,
+                        'tab' => 'Thông báo'
                     ]
                 ],
             ]
