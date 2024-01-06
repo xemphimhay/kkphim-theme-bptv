@@ -289,11 +289,15 @@
             </div>
         </div>
         <div id="mv-keywords">
-            <strong class="mr10">Từ khóa:</strong>
+            <strong class="mr10">Từ khóa: xem phim {{ $currentMovie->name }} </strong>
             @foreach ($currentMovie->tags as $tag)
                 <a href="{{ $tag->getUrl() }}" rel="follow, index"
                     title="{{ $tag->name }}">{{ $tag->name }},</a>
             @endforeach
+            Phim {{ $currentMovie->name }}, {{ $currentMovie->origin_name }}, Phim {{ $currentMovie->name }}
+            {{ $currentMovie->episode_current }}, {{ $currentMovie->name }} fptplay, {{ $currentMovie->name }} tv360,
+            {{ $currentMovie->name }} phimmoi, {{ $currentMovie->origin_name }} vuighe, {{ $currentMovie->origin_name }}
+            animevietsub, {{ $currentMovie->name }} {{ $currentMovie->publish_year }}
         </div>
     </main>
 @endsection

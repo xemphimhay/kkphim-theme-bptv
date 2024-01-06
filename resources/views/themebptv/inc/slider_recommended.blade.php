@@ -2,31 +2,27 @@
     <div class="MovieListTopCn">
         <div class="MovieListTop owl-carousel">
             @foreach ($recommendations ?? [] as $movie)
-                <li class="TPostMv">
-                    <article id="post-{{ $movie->id }}"
-                        class="TPost C post-{{ $movie->id }} post type-post status-publish format-standard has-post-thumbnail hentry">
-                        <a href="{{ $movie->getUrl() }}">
+                <div class="TPostMv">
+                    <div class="TPost B">
+                        <a href="{{ $movie->getUrl() }}"
+                            title="{{ $movie->name }} ({{ $movie->publish_year }})">
                             <div class="Image">
-                                <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="215" height="320"
+                                <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="180" height="260"
                                         src="{{ $movie->getThumbUrl() }}"
-                                        class="attachment-thumbnail size-thumbnail wp-post-image"
-                                        alt="{{ $movie->name }} - {{ $movie->origin_name }} ({{ $movie->publish_year }})"
-                                        title="{{ $movie->name }} - {{ $movie->origin_name }} ({{ $movie->publish_year }})" />
-                                </figure>
-                                <span class="mli-quality">
-                                    @if ($movie->type == 'series')
-                                        {{ $movie->episode_current }}
-                                    @else
-                                        {{ $movie->quality }} {{ $movie->language }}
-                                    @endif
-                                </span>
+                                        class="attachment-img-mov-md size-img-mov-md wp-post-image"
+                                        alt="{{ $movie->name }} ({{ $movie->publish_year }})"></figure>
+                                <span class="mli-eps">TẬP<i>{{ $movie->episode_current }}</i></span>
+                                <div class="anime-extras">
+                                    <div class="anime-avg-user-rating"
+                                        title="9.8 trong số 10 dựa trên 1038 thành viên đánh giá"
+                                        data-action="click->anime-card#showLibraryEditor"><i class="fa fa-star"></i>9.8
+                                    </div>
+                                </div>
                             </div>
-                            <h2 class="Title">{{ $movie->name }}</h2> <span class="Year">{{ $movie->origin_name }}
-                                ({{ $movie->publish_year }})
-                            </span>
+                            <div class="Title">{{ $movie->name }}</div>
                         </a>
-                    </article>
-                </li>
+                    </div>
+                </div>
             @endforeach
         </div>
     </div>
